@@ -2,29 +2,32 @@
 package entidades;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
  *
- * @author darkm
+ * @author Jesús Lares
+ * @author ...
  */
 @Entity
-@Table(name = "Beneficiarios")
+@Table(name = "beneficiarios")
 public class Beneficiario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Id
     @Column(name = "id_beneficiario")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     @Column(name = "clave_contrato", nullable = false)
-    private int claveContrato;
+    private Integer claveContrato;
     
     @Column(name = "nombres", length = 50, nullable = false)
     private String nombres;
@@ -39,6 +42,15 @@ public class Beneficiario implements Serializable {
     private String usuario;
     
     @Column(name = "contra", length = 100, nullable = false)
-    private String contra
+    private String contra;
+    
+    @Column(name = "saldo", precision = 10, scale = 2, nullable = false)
+    private Double saldo;
+    
+    @OneToMany(mappedBy = "beneficiario", cascade = {CascadeType.PERSIST})
+    private List<CuentaBancaria> cuentasBancarias;
+    
+    @OneToMany(mappedBy = "beneficiario", cascade = {CascadeType.PERSIST})
+    private List<Pago> pagos;
     
 }

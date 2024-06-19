@@ -3,6 +3,8 @@
   <persistence-unit name="ConexionJPA" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entidades.Beneficiario</class>
+    <class>entidades.CuentaBancaria</class>
+    <class>entidades.Pago</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Pagos?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
