@@ -5,6 +5,7 @@
     <class>entidades.Beneficiario</class>
     <class>entidades.CuentaBancaria</class>
     <class>entidades.Pago</class>
+    <class>entidades.Estatus</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Pagos?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

@@ -3,6 +3,7 @@ package entidades;
 
 import java.io.Serializable;
 import java.util.Calendar;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -42,6 +44,9 @@ public class Pago implements Serializable {
     @ManyToOne(cascade = {CascadeType.REMOVE})
     @JoinColumn(name = "id_beneficiario", nullable = false)
     private Beneficiario beneficiario;
+    
+    @OneToMany(mappedBy = "pago",cascade ={CascadeType.PERSIST})
+    private List<Estatus> pagoEstatus;
 
     public Pago() {
     }
@@ -85,6 +90,15 @@ public class Pago implements Serializable {
     public void setBeneficiario(Beneficiario beneficiario) {
         this.beneficiario = beneficiario;
     }
+
+    public List<Estatus> getPagoEstatus() {
+        return pagoEstatus;
+    }
+
+    public void setPagoEstatus(List<Estatus> pagoEstatus) {
+        this.pagoEstatus = pagoEstatus;
+    }
+    
     
     
     
