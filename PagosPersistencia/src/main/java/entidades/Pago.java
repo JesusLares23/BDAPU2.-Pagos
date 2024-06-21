@@ -42,6 +42,51 @@ public class Pago implements Serializable {
     @ManyToOne(cascade = {CascadeType.REMOVE})
     @JoinColumn(name = "id_beneficiario", nullable = false)
     private Beneficiario beneficiario;
+
+    public Pago() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Double getMonto() {
+        return monto;
+    }
+
+    public void setMonto(Double monto) {
+        this.monto = monto;
+    }
+
+    public Calendar getFechaHora() {
+        return fechaHora;
+    }
+
+    public void setFechaHora(Calendar fechaHora) {
+        this.fechaHora = fechaHora;
+    }
+
+    public String getComprobante() {
+        return comprobante;
+    }
+
+    public void setComprobante(String comprobante) {
+        this.comprobante = comprobante;
+    }
+
+    public Beneficiario getBeneficiario() {
+        return beneficiario;
+    }
+
+    public void setBeneficiario(Beneficiario beneficiario) {
+        this.beneficiario = beneficiario;
+    }
+    
+    
     
     
 }

@@ -38,6 +38,51 @@ public class CuentaBancaria implements Serializable {
     @ManyToOne(cascade = {CascadeType.REMOVE})
     @JoinColumn(name = "id_beneficiario", nullable = false)
     private Beneficiario beneficiario;
+
+    public CuentaBancaria() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getNumCuenta() {
+        return numCuenta;
+    }
+
+    public void setNumCuenta(Integer numCuenta) {
+        this.numCuenta = numCuenta;
+    }
+
+    public String getClabe() {
+        return clabe;
+    }
+
+    public void setClabe(String clabe) {
+        this.clabe = clabe;
+    }
+
+    public Boolean getEliminada() {
+        return eliminada;
+    }
+
+    public void setEliminada(Boolean eliminada) {
+        this.eliminada = eliminada;
+    }
+
+    public Beneficiario getBeneficiario() {
+        return beneficiario;
+    }
+
+    public void setBeneficiario(Beneficiario beneficiario) {
+        this.beneficiario = beneficiario;
+    }
+    
+    
     
     
 }

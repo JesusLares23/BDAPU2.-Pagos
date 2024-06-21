@@ -52,5 +52,90 @@ public class Beneficiario implements Serializable {
     
     @OneToMany(mappedBy = "beneficiario", cascade = {CascadeType.PERSIST})
     private List<Pago> pagos;
+
+    public Beneficiario() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getClaveContrato() {
+        return claveContrato;
+    }
+
+    public void setClaveContrato(Integer claveContrato) {
+        this.claveContrato = claveContrato;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
+    }
+
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
+    }
+
+    public String getApellidoMaterno() {
+        return apellidoMaterno;
+    }
+
+    public void setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContra() {
+        return contra;
+    }
+
+    public void setContra(String contra) {
+        this.contra = contra;
+    }
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
+    }
+
+    public List<CuentaBancaria> getCuentasBancarias() {
+        return cuentasBancarias;
+    }
+
+    public void setCuentasBancarias(List<CuentaBancaria> cuentasBancarias) {
+        this.cuentasBancarias = cuentasBancarias;
+    }
+
+    public List<Pago> getPagos() {
+        return pagos;
+    }
+
+    public void setPagos(List<Pago> pagos) {
+        this.pagos = pagos;
+    }
+    
+    
     
 }
