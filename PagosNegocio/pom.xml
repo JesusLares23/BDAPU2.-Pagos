@@ -11,4 +11,5 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>com.mycompany.pagosnegocio.PagosNegocio</exec.mainClass>
     </properties>
+    <name>(BDAPU2)PagosNegocio</name>
 </project>
