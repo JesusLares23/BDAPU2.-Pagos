@@ -27,6 +27,7 @@ import javax.persistence.TemporalType;
 public class Pago implements Serializable {
 
     @Id
+    @Column(name = "id_pago")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
@@ -45,16 +46,47 @@ public class Pago implements Serializable {
     @JoinColumn(name = "id_beneficiario", nullable = false)
     private Beneficiario beneficiario;
     
-    @OneToMany(mappedBy = "pago",cascade ={CascadeType.PERSIST})
-    private List<Estatus> pagoEstatus;
+    @ManyToOne(cascade = {CascadeType.REMOVE})
+    @JoinColumn(name = "id_tipo", nullable = false)
+    private Tipo tipo;
+    
+    @OneToMany(mappedBy = "pago", cascade ={CascadeType.PERSIST})
+    private List<EstatusPago> estatusPagos;
 
     public Pago() {
     }
 
+    public Pago(
+            Long id, 
+            Double monto, 
+            Calendar fechaHora, 
+            String comprobante, 
+            Beneficiario beneficiario, 
+            Tipo tipo) {
+        this.id = id;
+        this.monto = monto;
+        this.fechaHora = fechaHora;
+        this.comprobante = comprobante;
+        this.beneficiario = beneficiario;
+        this.tipo = tipo;
+    }
+
+    public Pago(
+            Double monto, 
+            Calendar fechaHora, 
+            String comprobante, 
+            Beneficiario beneficiario, 
+            Tipo tipo) {
+        this.monto = monto;
+        this.fechaHora = fechaHora;
+        this.comprobante = comprobante;
+        this.beneficiario = beneficiario;
+        this.tipo = tipo;
+    }
+    
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -62,7 +94,6 @@ public class Pago implements Serializable {
     public Double getMonto() {
         return monto;
     }
-
     public void setMonto(Double monto) {
         this.monto = monto;
     }
@@ -70,7 +101,6 @@ public class Pago implements Serializable {
     public Calendar getFechaHora() {
         return fechaHora;
     }
-
     public void setFechaHora(Calendar fechaHora) {
         this.fechaHora = fechaHora;
     }
@@ -78,7 +108,6 @@ public class Pago implements Serializable {
     public String getComprobante() {
         return comprobante;
     }
-
     public void setComprobante(String comprobante) {
         this.comprobante = comprobante;
     }
@@ -86,20 +115,24 @@ public class Pago implements Serializable {
     public Beneficiario getBeneficiario() {
         return beneficiario;
     }
-
     public void setBeneficiario(Beneficiario beneficiario) {
         this.beneficiario = beneficiario;
-    }
+    }     
 
-    public List<Estatus> getPagoEstatus() {
-        return pagoEstatus;
+    public Tipo getTipo() {
+        return tipo;
     }
-
-    public void setPagoEstatus(List<Estatus> pagoEstatus) {
-        this.pagoEstatus = pagoEstatus;
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
     }
     
-    
+    public List<EstatusPago> getEstatusPagos() {
+        return estatusPagos;
+    }
+    public void setEstatusPagos(List<EstatusPago> estatusPagos) {
+        this.estatusPagos = estatusPagos;
+    }
+
     
     
     
