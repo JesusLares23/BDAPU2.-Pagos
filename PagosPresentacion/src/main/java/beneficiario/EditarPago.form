@@ -30,9 +30,9 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jComboBox1" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel4" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTmonto" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel2" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
-                          <Component id="jTextField2" alignment="0" pref="217" max="32767" attributes="0"/>
+                          <Component id="jTCuenta" alignment="0" pref="217" max="32767" attributes="0"/>
                           <Component id="jLabel3" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
                           <Component id="jLabel1" alignment="0" min="-2" pref="152" max="-2" attributes="0"/>
                       </Group>
@@ -56,11 +56,11 @@
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="jTmonto" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField2" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="jTCuenta" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -124,9 +124,9 @@
         <Property name="text" type="java.lang.String" value="Tipo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="jTmonto">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="jTCuenta">
     </Component>
     <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
