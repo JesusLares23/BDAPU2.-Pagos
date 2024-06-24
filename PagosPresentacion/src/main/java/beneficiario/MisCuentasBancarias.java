@@ -4,6 +4,12 @@
  */
 package beneficiario;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.table.TableColumnModel;
+import utilerias.JButtonCellEditor;
+import utilerias.JButtonRenderer;
+
 /**
  *
  * @author jesus
@@ -15,6 +21,71 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
      */
     public MisCuentasBancarias() {
         initComponents();
+        cargarConfiguracionInicialTabla();
+    }
+
+    private void cargarConfiguracionInicialTabla() {
+        // Listener para el botón de editar
+        ActionListener onEditarClickListener = new ActionListener() {
+            final int columnaId = 0;
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Método para editar una cuenta bancaria
+                // cargarCuentaSeleccionada();
+                // editar();
+                System.out.println("Editar");
+            }
+        };
+
+        // Listener para el botón de eliminar
+        ActionListener onEliminarClickListener = new ActionListener() {
+            final int columnaId = 0;
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Método para eliminar una cuenta bancaria
+                // eliminar
+                System.out.println("Eliminar");
+            }
+        };
+
+        // Listener para el botón de ver detalles
+        ActionListener onVerDetallesClickListener = new ActionListener() {
+            final int columnaId = 0;
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Método para ver los detalles de una cuenta bancaria
+                // verDetalles();
+                System.out.println("Ver");
+            }
+        };
+
+        // Obtener el modelo de columnas de la tabla
+        TableColumnModel modeloColumnas = this.tablaCuentasBancarias.getColumnModel();
+        int totalColumnas = modeloColumnas.getColumnCount();
+
+        // Configuración de la columna "Editar"
+        int indiceColumnaEditar = 4; // Ajusta el índice según sea necesario
+        if (indiceColumnaEditar < totalColumnas) {
+            modeloColumnas.getColumn(indiceColumnaEditar).setCellRenderer(new JButtonRenderer("Editar"));
+            modeloColumnas.getColumn(indiceColumnaEditar).setCellEditor(new JButtonCellEditor("Editar", onEditarClickListener));
+        }
+
+        // Configuración de la columna "Eliminar"
+        int indiceColumnaEliminar = 5; // Ajusta el índice según sea necesario
+        if (indiceColumnaEliminar < totalColumnas) {
+            modeloColumnas.getColumn(indiceColumnaEliminar).setCellRenderer(new JButtonRenderer("Eliminar"));
+            modeloColumnas.getColumn(indiceColumnaEliminar).setCellEditor(new JButtonCellEditor("Eliminar", onEliminarClickListener));
+        }
+
+        // Configuración de la columna "Ver"
+        int indiceColumnaVer = 6; // Ajusta el índice según sea necesario
+        if (indiceColumnaVer < totalColumnas) {
+            modeloColumnas.getColumn(indiceColumnaVer).setCellRenderer(new JButtonRenderer("Ver"));
+            modeloColumnas.getColumn(indiceColumnaVer).setCellEditor(new JButtonCellEditor("Ver", onVerDetallesClickListener));
+        }
     }
 
     /**
@@ -33,7 +104,7 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaCuentasBancarias = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,10 +114,15 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
         jButton1.setText("Volver al menu");
 
         jButton2.setText("Agregar cuenta");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaCuentasBancarias.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -61,7 +137,7 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, true, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -72,9 +148,9 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
+        jScrollPane1.setViewportView(tablaCuentasBancarias);
+        if (tablaCuentasBancarias.getColumnModel().getColumnCount() > 0) {
+            tablaCuentasBancarias.getColumnModel().getColumn(0).setResizable(false);
         }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -129,40 +205,12 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MisCuentasBancarias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MisCuentasBancarias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MisCuentasBancarias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MisCuentasBancarias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        FrmAgregarCuenta ac = new FrmAgregarCuenta();
+        ac.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MisCuentasBancarias().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -172,6 +220,6 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaCuentasBancarias;
     // End of variables declaration//GEN-END:variables
 }
