@@ -4,6 +4,7 @@
 
 package com.mycompany.pagospresentacion;
 
+import beneficiario.MenuBeni;
 import beneficiario.MisCuentasBancarias;
 
 /**
@@ -13,8 +14,6 @@ import beneficiario.MisCuentasBancarias;
 public class PagosPresentacion {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        MisCuentasBancarias cuenta= new MisCuentasBancarias();
-        cuenta.setVisible(true);
+       
     }
 }
