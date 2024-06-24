@@ -14,6 +14,7 @@ import beneficiario.MisCuentasBancarias;
 public class PagosPresentacion {
 
     public static void main(String[] args) {
-       
+       MenuBeni v = new MenuBeni();
+       v.setVisible(true);
     }
 }

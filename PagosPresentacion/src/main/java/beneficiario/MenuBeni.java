@@ -116,10 +116,15 @@ public class MenuBeni extends javax.swing.JFrame {
         
         MisCuentasBancarias v = new MisCuentasBancarias();
         v.setVisible(true);
+        dispose();
     }//GEN-LAST:event_bntMisCuetasActionPerformed
 
     private void bntPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntPagosActionPerformed
         // TODO add your handling code here:
+        
+        Pagos p = new Pagos();
+        p.setVisible(true);
+        dispose();
     }//GEN-LAST:event_bntPagosActionPerformed
 
     private void bntAbonosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAbonosActionPerformed
