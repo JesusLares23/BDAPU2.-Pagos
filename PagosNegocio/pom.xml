@@ -5,10 +5,18 @@
     <artifactId>PagosNegocio</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>jpsus.org</groupId>
+    <artifactId>PagosPersistencia</artifactId>
+    <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>com.mycompany.pagosnegocio.PagosNegocio</exec.mainClass>
     </properties>
+    <name>(BDAPU2)PagosNegocio</name>
 </project>

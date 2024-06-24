@@ -42,6 +42,30 @@ public class CuentaBancaria implements Serializable {
     public CuentaBancaria() {
     }
 
+    public CuentaBancaria(
+            Long id, 
+            Integer numCuenta, 
+            String clabe, 
+            Boolean eliminada, 
+            Beneficiario beneficiario) {
+        this.id = id;
+        this.numCuenta = numCuenta;
+        this.clabe = clabe;
+        this.eliminada = eliminada;
+        this.beneficiario = beneficiario;
+    }
+
+    public CuentaBancaria(
+            Integer numCuenta, 
+            String clabe, 
+            Boolean eliminada, 
+            Beneficiario beneficiario) {
+        this.numCuenta = numCuenta;
+        this.clabe = clabe;
+        this.eliminada = eliminada;
+        this.beneficiario = beneficiario;
+    }
+    
     public Long getId() {
         return id;
     }

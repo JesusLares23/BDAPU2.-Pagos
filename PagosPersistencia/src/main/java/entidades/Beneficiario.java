@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
+ * 
  * @author Jesús Lares
  * @author ...
  */
@@ -56,10 +56,45 @@ public class Beneficiario implements Serializable {
     public Beneficiario() {
     }
 
+    public Beneficiario(
+            Long id, 
+            Integer claveContrato, 
+            String nombres, 
+            String apellidoPaterno, 
+            String apellidoMaterno, 
+            String usuario, 
+            String contra, 
+            Double saldo) {
+        this.id = id;
+        this.claveContrato = claveContrato;
+        this.nombres = nombres;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
+        this.usuario = usuario;
+        this.contra = contra;
+        this.saldo = saldo;
+    }
+
+    public Beneficiario(
+            Integer claveContrato, 
+            String nombres, 
+            String apellidoPaterno, 
+            String apellidoMaterno, 
+            String usuario, 
+            String contra, 
+            Double saldo) {
+        this.claveContrato = claveContrato;
+        this.nombres = nombres;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
+        this.usuario = usuario;
+        this.contra = contra;
+        this.saldo = saldo;
+    }
+
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -67,7 +102,6 @@ public class Beneficiario implements Serializable {
     public Integer getClaveContrato() {
         return claveContrato;
     }
-
     public void setClaveContrato(Integer claveContrato) {
         this.claveContrato = claveContrato;
     }
@@ -75,7 +109,6 @@ public class Beneficiario implements Serializable {
     public String getNombres() {
         return nombres;
     }
-
     public void setNombres(String nombres) {
         this.nombres = nombres;
     }
@@ -83,7 +116,6 @@ public class Beneficiario implements Serializable {
     public String getApellidoPaterno() {
         return apellidoPaterno;
     }
-
     public void setApellidoPaterno(String apellidoPaterno) {
         this.apellidoPaterno = apellidoPaterno;
     }
@@ -91,7 +123,6 @@ public class Beneficiario implements Serializable {
     public String getApellidoMaterno() {
         return apellidoMaterno;
     }
-
     public void setApellidoMaterno(String apellidoMaterno) {
         this.apellidoMaterno = apellidoMaterno;
     }
@@ -99,7 +130,6 @@ public class Beneficiario implements Serializable {
     public String getUsuario() {
         return usuario;
     }
-
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
@@ -107,7 +137,6 @@ public class Beneficiario implements Serializable {
     public String getContra() {
         return contra;
     }
-
     public void setContra(String contra) {
         this.contra = contra;
     }
@@ -115,7 +144,6 @@ public class Beneficiario implements Serializable {
     public Double getSaldo() {
         return saldo;
     }
-
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
     }
@@ -123,7 +151,6 @@ public class Beneficiario implements Serializable {
     public List<CuentaBancaria> getCuentasBancarias() {
         return cuentasBancarias;
     }
-
     public void setCuentasBancarias(List<CuentaBancaria> cuentasBancarias) {
         this.cuentasBancarias = cuentasBancarias;
     }
@@ -131,7 +158,6 @@ public class Beneficiario implements Serializable {
     public List<Pago> getPagos() {
         return pagos;
     }
-
     public void setPagos(List<Pago> pagos) {
         this.pagos = pagos;
     }
