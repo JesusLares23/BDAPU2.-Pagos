@@ -4,20 +4,29 @@
  */
 package ControlCuentaBancaria;
 
+import DTOs.BeneficiarioDTO;
 import entidades.Beneficiario;
 import entidades.CuentaBancaria;
 import java.util.List;
+import DTOs.CuentaBancariaDTO;
 
 /**
  *
  * @author jesus
  */
 public class ControlCuentaB implements Interfaces.ICuentaBancaria{
+    BeneficiarioDTO beneficiario;
+    public ControlCuentaB(BeneficiarioDTO bene) {
+        this.beneficiario = bene;
+    }
+    
+    
 
     
 
     @Override
-    public CuentaBancaria crearCuentaBancaria(CuentaBancaria cuenta) {
+    public CuentaBancaria crearCuentaBancaria(CuentaBancariaDTO cuenta) {
+        
         return null;
     }
 
@@ -26,7 +35,7 @@ public class ControlCuentaB implements Interfaces.ICuentaBancaria{
     }
 
     @Override
-    public CuentaBancaria actualizarCuentaBancaria(CuentaBancaria cuenta) {
+    public CuentaBancaria actualizarCuentaBancaria(CuentaBancariaDTO cuenta) {
         return null;
     }
 
@@ -34,24 +43,16 @@ public class ControlCuentaB implements Interfaces.ICuentaBancaria{
     public List<CuentaBancaria> CargarCuentas() {
         return null;
     }
+    public CuentaBancaria DTOEntidad(CuentaBancariaDTO cuentaDTO){
+    int numCuenta = cuentaDTO.getNumCuenta();
+    String clabe = cuentaDTO.getClabe();
+    //String banco = cuentaDTO.getBanco();
+    boolean eliminada = cuentaDTO.getEliminada();
     
-//    public void cargarCuentasPorBeneficiario(Beneficiario beneficiario) {
-//        List<CuentaBancariaDTO> cuentas = cuentaBancariaService.obtenerCuentasPorBeneficiario(beneficiario);
-//        DefaultTableModel model = (DefaultTableModel) tablaCuentasBancarias.getModel();
-//        model.setRowCount(0); // Limpiar la tabla
-//
-//        for (CuentaBancariaDTO cuenta : cuentas) {
-//            model.addRow(new Object[]{
-//                cuenta.getNumCuenta(),
-//                cuenta.getClabe(),
-//                cuenta.getBanco(),
-//                cuenta.getEliminada() ? "Sí" : "No",
-//                "Editar",  // Placeholder para el botón de editar
-//                "Eliminar", // Placeholder para el botón de eliminar
-//                "Ver"       // Placeholder para el botón de ver detalles
-//            });
-//        }
-//    }
+    //CuentaBancaria nuevaCuenta = new CuentaBancaria(numCuenta, clabe, eliminada,;
+        return null;
+    }
+    
 
     @Override
     public void cargarCuentasPorBeneficiario(Beneficiario beneficiario) {

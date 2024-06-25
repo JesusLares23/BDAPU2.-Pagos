@@ -9,18 +9,21 @@ import java.awt.event.ActionListener;
 import javax.swing.table.TableColumnModel;
 import utilerias.JButtonCellEditor;
 import utilerias.JButtonRenderer;
+import DTOs.BeneficiarioDTO;
 
 /**
  *
  * @author jesus
  */
 public class MisCuentasBancarias extends javax.swing.JFrame {
-
+    
+    BeneficiarioDTO beneficiario;
     /**
      * Creates new form MisCuentasBancarias
      */
-    public MisCuentasBancarias() {
+    public MisCuentasBancarias(BeneficiarioDTO beneficiariodto) {
         initComponents();
+        this.beneficiario = beneficiariodto;
         cargarConfiguracionInicialTabla();
     }
 
@@ -207,7 +210,7 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        FrmAgregarCuenta ac = new FrmAgregarCuenta();
+        FrmAgregarCuenta ac = new FrmAgregarCuenta(beneficiario);
         ac.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 

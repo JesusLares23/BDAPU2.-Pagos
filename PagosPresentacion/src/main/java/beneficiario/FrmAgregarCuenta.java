@@ -3,21 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package beneficiario;
-
+import login.login;
+import ControlCuentaBancaria.ControlCuentaB;
 import DTOs.CuentaBancariaDTO;
 import javax.swing.JOptionPane;
+import DTOs.BeneficiarioDTO;
 
 /**
  *
  * @author jesus
  */
 public class FrmAgregarCuenta extends javax.swing.JFrame {
-
+    BeneficiarioDTO beneficiario;
+    ControlCuentaB controlCuenta;
     /**
      * Creates new form FrmAgregarCuenta
      */
-    public FrmAgregarCuenta() {
+    public FrmAgregarCuenta(BeneficiarioDTO bene) {
         initComponents();
+        this.beneficiario = bene;
     }
 
     /**
@@ -160,7 +164,11 @@ public class FrmAgregarCuenta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ConvertirADTO();
+        
+        controlCuenta.crearCuentaBancaria(ConvertirADTO());
+        
+        
+        
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -170,10 +178,11 @@ public class FrmAgregarCuenta extends javax.swing.JFrame {
         int numCuenta = Integer.parseInt(str);
         String clabe = this.TFClabe.getText();
         String banco = (String) this.ComboBoxBancos.getSelectedItem();
+        
 
         if (this.TFNumCuenta != null && this.TFClabe != null && this.ComboBoxBancos !=null) {
             try {
-                CuentaBancariaDTO newDTO = new CuentaBancariaDTO(numCuenta, clabe, banco, false);
+                CuentaBancariaDTO newDTO = new CuentaBancariaDTO(numCuenta, clabe, banco, false,beneficiario);
                 return newDTO;
             } catch (Exception e) {
                 System.out.println("Error");

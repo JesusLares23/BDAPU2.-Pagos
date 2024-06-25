@@ -6,6 +6,7 @@ package Interfaces;
 
 import entidades.Beneficiario;
 import entidades.CuentaBancaria;
+import DTOs.CuentaBancariaDTO;
 import java.util.List;
 
 /**
@@ -15,9 +16,9 @@ import java.util.List;
 public interface ICuentaBancaria {
     
     public List <CuentaBancaria> CargarCuentas();
-    public CuentaBancaria crearCuentaBancaria(CuentaBancaria cuenta);
+    public CuentaBancaria crearCuentaBancaria(CuentaBancariaDTO cuenta);
     public void eliminarCuentaBancaria(long id);
-    public CuentaBancaria actualizarCuentaBancaria(CuentaBancaria cuenta);
+    public CuentaBancaria actualizarCuentaBancaria(CuentaBancariaDTO cuenta);
     public void cargarCuentasPorBeneficiario(Beneficiario beneficiario);
     
     

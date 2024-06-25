@@ -17,9 +17,9 @@ public class CuentaBancariaDTO {
     String clabe;
     String banco;
     Boolean eliminada;
-    Beneficiario beneficiario;
+    BeneficiarioDTO beneficiario;
 
-    public CuentaBancariaDTO(Integer numCuenta, String clabe,String banco, Boolean eliminada, Beneficiario beneficiario) {
+    public CuentaBancariaDTO(Integer numCuenta, String clabe,String banco, Boolean eliminada, BeneficiarioDTO beneficiario) {
         this.numCuenta = numCuenta;
         this.clabe = clabe;
         this.banco = banco;
@@ -67,11 +67,11 @@ public class CuentaBancariaDTO {
         this.eliminada = eliminada;
     }
 
-    public Beneficiario getBeneficiario() {
+    public BeneficiarioDTO getBeneficiario() {
         return beneficiario;
     }
 
-    public void setBeneficiario(Beneficiario beneficiario) {
+    public void setBeneficiario(BeneficiarioDTO beneficiario) {
         this.beneficiario = beneficiario;
     }
 
