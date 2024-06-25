@@ -17,6 +17,7 @@ public class ControlBeneficiario implements IBeneficiario {
     public BeneficiarioDAO beneficiarioDAO;
 
     
+    
     public Beneficiario convertirBeneficiario(BeneficiarioDTO beneficiarioDTO) {
         Integer claveContrato = beneficiarioDTO.getClaveContrato();
         String nombres = beneficiarioDTO.getNombres();

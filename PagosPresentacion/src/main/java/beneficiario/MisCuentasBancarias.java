@@ -7,7 +7,7 @@ package beneficiario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.table.TableColumnModel;
-import utilerias.JButtonCellEditor;
+//import Utileria.JButtonCellEditor;
 import utilerias.JButtonRenderer;
 import DTOs.BeneficiarioDTO;
 
@@ -73,21 +73,21 @@ public class MisCuentasBancarias extends javax.swing.JFrame {
         int indiceColumnaEditar = 4; // Ajusta el índice según sea necesario
         if (indiceColumnaEditar < totalColumnas) {
             modeloColumnas.getColumn(indiceColumnaEditar).setCellRenderer(new JButtonRenderer("Editar"));
-            modeloColumnas.getColumn(indiceColumnaEditar).setCellEditor(new JButtonCellEditor("Editar", onEditarClickListener));
+//            modeloColumnas.getColumn(indiceColumnaEditar).setCellEditor(new JButtonCellEditor("Editar", onEditarClickListener));
         }
 
         // Configuración de la columna "Eliminar"
         int indiceColumnaEliminar = 5; // Ajusta el índice según sea necesario
         if (indiceColumnaEliminar < totalColumnas) {
             modeloColumnas.getColumn(indiceColumnaEliminar).setCellRenderer(new JButtonRenderer("Eliminar"));
-            modeloColumnas.getColumn(indiceColumnaEliminar).setCellEditor(new JButtonCellEditor("Eliminar", onEliminarClickListener));
+//            modeloColumnas.getColumn(indiceColumnaEliminar).setCellEditor(new JButtonCellEditor("Eliminar", onEliminarClickListener));
         }
 
         // Configuración de la columna "Ver"
         int indiceColumnaVer = 6; // Ajusta el índice según sea necesario
         if (indiceColumnaVer < totalColumnas) {
             modeloColumnas.getColumn(indiceColumnaVer).setCellRenderer(new JButtonRenderer("Ver"));
-            modeloColumnas.getColumn(indiceColumnaVer).setCellEditor(new JButtonCellEditor("Ver", onVerDetallesClickListener));
+//            modeloColumnas.getColumn(indiceColumnaVer).setCellEditor(new JButtonCellEditor("Ver", onVerDetallesClickListener));
         }
     }
 

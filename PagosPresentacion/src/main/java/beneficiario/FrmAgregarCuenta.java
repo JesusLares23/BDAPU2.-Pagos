@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package beneficiario;
-import login.login;
+//import login.login;
 import Controles.ControlCuentaB;
 import DTOs.CuentaBancariaDTO;
 import javax.swing.JOptionPane;
