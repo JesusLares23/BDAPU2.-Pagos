@@ -1,3 +1,4 @@
+DTOs\BeneficiarioDTO.class
 com\mycompany\pagosnegocio\PagosNegocio.class
 ControlCuentaBancaria\ControlCuentaB.class
 Interfaces\ICuentaBancaria.class

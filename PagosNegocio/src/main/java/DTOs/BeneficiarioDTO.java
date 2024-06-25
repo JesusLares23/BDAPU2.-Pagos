@@ -10,15 +10,22 @@ package DTOs;
  */
 public class BeneficiarioDTO {
     
-    int claveContrato;
+    Integer claveContrato;
     String nombres;
     String apellidoPaterno;
     String apellidoMaterno;
     String usuario;
     String contra;
-    float Saldo;
+    Double Saldo;
 
-    public BeneficiarioDTO(int claveContrato, String nombres, String apellidoPaterno, String apellidoMaterno, String usuario, String contra, float Saldo) {
+    public BeneficiarioDTO(
+            Integer claveContrato, 
+            String nombres, 
+            String apellidoPaterno, 
+            String apellidoMaterno, 
+            String usuario, 
+            String contra, 
+            Double Saldo) {
         this.claveContrato = claveContrato;
         this.nombres = nombres;
         this.apellidoPaterno = apellidoPaterno;
@@ -32,15 +39,13 @@ public class BeneficiarioDTO {
     public int getClaveContrato() {
         return claveContrato;
     }
-
-    public void setClaveContrato(int claveContrato) {
+    public void setClaveContrato(Integer claveContrato) {
         this.claveContrato = claveContrato;
     }
 
     public String getNombres() {
         return nombres;
     }
-
     public void setNombres(String nombres) {
         this.nombres = nombres;
     }
@@ -48,7 +53,6 @@ public class BeneficiarioDTO {
     public String getApellidoPaterno() {
         return apellidoPaterno;
     }
-
     public void setApellidoPaterno(String apellidoPaterno) {
         this.apellidoPaterno = apellidoPaterno;
     }
@@ -56,7 +60,6 @@ public class BeneficiarioDTO {
     public String getApellidoMaterno() {
         return apellidoMaterno;
     }
-
     public void setApellidoMaterno(String apellidoMaterno) {
         this.apellidoMaterno = apellidoMaterno;
     }
@@ -64,7 +67,6 @@ public class BeneficiarioDTO {
     public String getUsuario() {
         return usuario;
     }
-
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
@@ -72,16 +74,14 @@ public class BeneficiarioDTO {
     public String getContra() {
         return contra;
     }
-
     public void setContra(String contra) {
         this.contra = contra;
     }
 
-    public float getSaldo() {
+    public Double getSaldo() {
         return Saldo;
     }
-
-    public void setSaldo(float Saldo) {
+    public void setSaldo(Double Saldo) {
         this.Saldo = Saldo;
     }
     

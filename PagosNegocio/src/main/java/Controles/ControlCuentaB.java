@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ControlCuentaBancaria;
+package Controles;
 
 import DTOs.BeneficiarioDTO;
 import entidades.Beneficiario;
@@ -19,10 +19,6 @@ public class ControlCuentaB implements Interfaces.ICuentaBancaria{
     public ControlCuentaB(BeneficiarioDTO bene) {
         this.beneficiario = bene;
     }
-    
-    
-
-    
 
     @Override
     public CuentaBancaria crearCuentaBancaria(CuentaBancariaDTO cuenta) {
@@ -43,6 +39,7 @@ public class ControlCuentaB implements Interfaces.ICuentaBancaria{
     public List<CuentaBancaria> CargarCuentas() {
         return null;
     }
+    
     public CuentaBancaria DTOEntidad(CuentaBancariaDTO cuentaDTO){
     int numCuenta = cuentaDTO.getNumCuenta();
     String clabe = cuentaDTO.getClabe();

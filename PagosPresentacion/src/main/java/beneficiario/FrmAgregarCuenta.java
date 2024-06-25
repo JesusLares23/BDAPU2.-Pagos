@@ -4,7 +4,7 @@
  */
 package beneficiario;
 import login.login;
-import ControlCuentaBancaria.ControlCuentaB;
+import Controles.ControlCuentaB;
 import DTOs.CuentaBancariaDTO;
 import javax.swing.JOptionPane;
 import DTOs.BeneficiarioDTO;
