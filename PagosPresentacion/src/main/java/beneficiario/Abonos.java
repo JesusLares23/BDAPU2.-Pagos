@@ -86,6 +86,11 @@ public class Abonos extends javax.swing.JFrame {
         });
 
         bntAgregar.setText("Agregar Abonos");
+        bntAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntAgregarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -146,6 +151,13 @@ public class Abonos extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_bntRegreasrActionPerformed
+
+    private void bntAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAgregarActionPerformed
+        // TODO add your handling code here:
+        NuevoAbono m = new NuevoAbono();
+        m.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_bntAgregarActionPerformed
 
     /**
      * @param args the command line arguments
