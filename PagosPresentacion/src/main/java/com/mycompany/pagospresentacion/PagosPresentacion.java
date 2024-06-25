@@ -1,9 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 
-*/
 package com.mycompany.pagospresentacion;
-import login.login;
+
+import admin.frmSistemaPagosAdmin;
+//import login.login;
 
 
 /**
@@ -13,10 +12,11 @@ import login.login;
 public class PagosPresentacion {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        login login = new login();
-        login.setVisible(true);
+//        System.out.println("Hello World!");
+//        login login = new login();
+//        login.setVisible(true);
         
-
+        frmSistemaPagosAdmin sistemaPagos = new frmSistemaPagosAdmin();
+        sistemaPagos.setVisible(true);
     }
 }

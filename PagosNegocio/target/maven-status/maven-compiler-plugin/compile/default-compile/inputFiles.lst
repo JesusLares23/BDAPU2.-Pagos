@@ -1,5 +1,7 @@
 C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\Interfaces\ICuentaBancaria.java
-C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\ControlCuentaBancaria\ControlCuentaB.java
+C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\Controles\ControlCuentaB.java
 C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\DTOs\BeneficiarioDTO.java
+C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\Controles\ControlBeneficiario.java
 C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\com\mycompany\pagosnegocio\PagosNegocio.java
+C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\Interfaces\IBeneficiario.java
 C:\Users\darkm\Documents\GitHub\BDAPU2.-Pagos\PagosNegocio\src\main\java\DTOs\CuentaBancariaDTO.java
