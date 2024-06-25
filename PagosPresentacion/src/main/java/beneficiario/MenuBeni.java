@@ -129,6 +129,9 @@ public class MenuBeni extends javax.swing.JFrame {
 
     private void bntAbonosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAbonosActionPerformed
         // TODO add your handling code here:
+        Abonos m = new Abonos();
+        m.setVisible(true);
+        dispose();
     }//GEN-LAST:event_bntAbonosActionPerformed
 
     /**
